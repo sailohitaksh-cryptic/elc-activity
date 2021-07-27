@@ -104,17 +104,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
             ],
           ),
-
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30.0),
             border: Border.all(
               color:Colors.black,
 
             ),
+        ),
 
 
 
-          ),
+
+
         ),
       ),
     );

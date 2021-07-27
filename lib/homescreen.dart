@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal:48),
+                              padding: EdgeInsets.only(left:60.0),
                               child: Text(
                                 'J.AR.VIS',
                                 style: GoogleFonts.pattaya(

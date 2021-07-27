@@ -28,7 +28,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       backgroundColor: Colors.black,
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,
@@ -55,7 +55,7 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
               ),
-              Image(image: AssetImage('images/login.png'),),
+              Flexible(child: Image(image: AssetImage('images/login.png'),)),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: TextField(
