@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "607668519979",
+    "project_id": "eventory-208ef",
+    "storage_bucket": "eventory-208ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:607668519979:android:014b388667dc2902f3166e",
+        "android_client_info": {
+          "package_name": "ananya_agarwal.eventaholic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "607668519979-f2heruoo7kllf97q6abtflscdbf4avch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX3PNpHDD4xJEBB6F3i5x9mgbHWfZ1fFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "607668519979-f2heruoo7kllf97q6abtflscdbf4avch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
