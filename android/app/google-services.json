@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1079928469809",
+    "project_id": "eventaholic-e1ce5",
+    "storage_bucket": "eventaholic-e1ce5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079928469809:android:372708e79462624fe1d810",
+        "android_client_info": {
+          "package_name": "co.Sai_Lohitaksh.eventaholic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079928469809-oima0fj627lj6011v7o8tt8pi8ctpsu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO3m8Gv4OGK4OMDKyOgaiur7aNyijuTKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079928469809-oima0fj627lj6011v7o8tt8pi8ctpsu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

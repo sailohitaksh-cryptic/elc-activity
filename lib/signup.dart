@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 class SignUp extends StatefulWidget {
   static String id ='sign_up';
   @override
@@ -208,7 +209,11 @@ class _SignUpState extends State<SignUp> {
                       Navigator.pushNamed(context, HomeScreen.id);
 
                     }
-                  }catch(e){print(e);}
+                  }catch(e){Alert(
+                    context: context,
+                    title: 'INVALID SIGN UP!',
+                    desc: 'pls try again',
+                  ).show();}
 
 
                 },
