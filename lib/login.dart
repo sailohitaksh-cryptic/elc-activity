@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:flutter/material.dart';
@@ -7,22 +6,24 @@ import 'homescreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
+
 class LoginScreen extends StatefulWidget {
-  static String id ='login_screen';
+  static String id = 'login_screen';
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  CollectionReference student = FirebaseFirestore.instance.collection('student');
+  CollectionReference student =
+      FirebaseFirestore.instance.collection('student');
   final _auth = FirebaseAuth.instance;
-  bool showSpinner=false;
+  bool showSpinner = false;
   String email;
   String password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.black,
       body: SafeArea(
         child: ModalProgressHUD(
@@ -43,51 +44,51 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontSize: 60.0,
                         fontWeight: FontWeight.w500,
                       ),
-
                     ),
                   ),
                 ),
-                Flexible(child: Image(image: AssetImage('images/login.png'),)),
+                Flexible(
+                    child: Image(
+                  image: AssetImage('images/login.png'),
+                )),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 6.0, horizontal: 16.0),
                   child: TextField(
-                    textAlign:TextAlign.center,
+                    textAlign: TextAlign.center,
                     onChanged: (value) {
-                     email=value;
+                      email = value;
                     },
-
                     cursorColor: Colors.deepOrangeAccent,
                     cursorHeight: 25.0,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-
                       hintText: 'Email',
-                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey.shade100),
-
-                      contentPadding:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                      hintStyle: TextStyle(
+                          fontSize: 20.0, color: Colors.grey.shade100),
+                      contentPadding: EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(32.0)),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide:
-                        BorderSide(color: Colors.white, width: 1.0),
+                        borderSide: BorderSide(color: Colors.white, width: 1.0),
                         borderRadius: BorderRadius.all(Radius.circular(32.0)),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide:
-                        BorderSide(color: Colors.white, width: 2.0),
+                        borderSide: BorderSide(color: Colors.white, width: 2.0),
                         borderRadius: BorderRadius.all(Radius.circular(32.0)),
                       ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 6.0, horizontal: 16.0),
                   child: TextField(
-                    textAlign:TextAlign.center,
+                    textAlign: TextAlign.center,
                     onChanged: (value) {
-                      password=value;
+                      password = value;
                     },
                     style: TextStyle(color: Colors.white),
                     obscureText: true,
@@ -96,20 +97,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     cursorHeight: 25.0,
                     decoration: InputDecoration(
                       hintText: 'Password',
-                      hintStyle: TextStyle(fontSize: 20.0, color: Colors.grey.shade100),
-                      contentPadding:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                      hintStyle: TextStyle(
+                          fontSize: 20.0, color: Colors.grey.shade100),
+                      contentPadding: EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 20.0),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(32.0)),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide:
-                        BorderSide(color: Colors.white, width: 1.0),
+                        borderSide: BorderSide(color: Colors.white, width: 1.0),
                         borderRadius: BorderRadius.all(Radius.circular(32.0)),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide:
-                        BorderSide(color: Colors.white, width: 2.0),
+                        borderSide: BorderSide(color: Colors.white, width: 2.0),
                         borderRadius: BorderRadius.all(Radius.circular(32.0)),
                       ),
                     ),
@@ -117,33 +117,37 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 SizedBox(height: 15.0),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 100.0),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 6.0, horizontal: 100.0),
                   child: GestureDetector(
                     onTap: () async {
                       setState(() {
-                        showSpinner= true;
+                        showSpinner = true;
                       });
                       try {
                         final user = await _auth.signInWithEmailAndPassword(
                             email: email, password: password);
                         if (user != null) {
-                          student.doc(user.user.uid).get().then((value) =>{
-                            if( value.get('isStudent'))
-                              {
-                              Navigator.pushNamed(context, HomeScreen.id)
-                              }
-                          }).catchError((err)=>print(err));
-
+                          student
+                              .doc(user.user.uid)
+                              .get()
+                              .then((value) => {
+                                    if (value.get('isStudent'))
+                                      {
+                                        Navigator.pushNamed(
+                                            context, HomeScreen.id)
+                                      }
+                                  })
+                              .catchError((err) => print(err));
                         }
                         setState(() {
-                          showSpinner= false;
+                          showSpinner = false;
                         });
-                      }
-                      catch(e){
+                      } catch (e) {
                         Alert(
-                            context: context,
-                            title: 'INVALID LOGIN!',
-                            desc: 'Wrong Email/Password',
+                          context: context,
+                          title: 'INVALID LOGIN!',
+                          desc: 'Wrong Email/Password',
                         ).show();
                       }
                     },
@@ -154,7 +158,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(30),
-
                       ),
                       child: Center(
                         child: Text(
@@ -166,13 +169,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                       ),
-
-
                     ),
                   ),
                 ),
               ],
-
             ),
           ),
         ),
