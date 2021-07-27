@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'favourites.dart';
 import 'categories.dart';
 import 'student_profile_view.dart';
+import 'sunburn_desc.dart';
 class HomeScreen extends StatefulWidget {
   static String id ='home_screen';
   @override
@@ -118,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal:40.0),
               child: GestureDetector(
                 onTap: (){
-                  print('yes');
+                  Navigator.pushNamed(context, SunburnDesc.id);
                 },
                 child: Container(
 

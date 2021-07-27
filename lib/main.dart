@@ -1,6 +1,7 @@
 import 'package:eventaholic/splash_screen.dart';
 import 'package:eventaholic/student_profile_view.dart';
 import 'package:eventaholic/studentprofile.dart';
+import 'package:eventaholic/sunburn_desc.dart';
 import 'package:flutter/material.dart';
 import 'welcome_screen.dart';
 import 'login.dart';
@@ -16,6 +17,7 @@ import 'favourites.dart';
 import 'student_profile_view.dart';
 import 'studentprofile.dart';
 import 'categories.dart';
+import 'sunburn_desc.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,6 +40,7 @@ class MyApp extends StatelessWidget {
         SignUpScreen.id:(context)=>SignUpScreen(),
         HomeScreen.id:(context)=>HomeScreen(),
         EventTapInfo.id:(context)=>EventTapInfo(),
+        SunburnDesc.id: (context)=>SunburnDesc(),
         Favourites.id:(context)=>Favourites(),
         StudentProfileView.id:(context)=>StudentProfileView(),
         StudentProfile.id:(context)=>StudentProfile(),
