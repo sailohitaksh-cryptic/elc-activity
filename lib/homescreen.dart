@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: [
                             Padding(
-                              padding: EdgeInsets.only(left:60.0),
+                              padding: EdgeInsets.fromLTRB(80.0,0,40,0),
                               child: Text(
                                 'J.AR.VIS',
                                 style: GoogleFonts.pattaya(
@@ -135,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.symmetric(horizontal:70.0),
+                              padding: const EdgeInsets.fromLTRB(100,0,40,0),
                               child: Text(
                                 'Sunburn',
                                 style: GoogleFonts.pattaya(
@@ -210,7 +210,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(48, 0, 95, 0),
+                              padding: const EdgeInsets.fromLTRB(95, 0, 45, 0),
                               child: Center(
                                 child: Text(
                                   'Grafiti-X',
