@@ -15,7 +15,6 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   CollectionReference student = FirebaseFirestore.instance.collection('student');
-  CollectionReference society = FirebaseFirestore.instance.collection('society');
   final _auth = FirebaseAuth.instance;
   bool showSpinner=false;
   String email;
