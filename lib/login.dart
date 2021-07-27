@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       backgroundColor: Colors.black,
       body: SafeArea(
         child: ModalProgressHUD(
@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
-                Image(image: AssetImage('images/login.png'),),
+                Flexible(child: Image(image: AssetImage('images/login.png'),)),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 6.0,horizontal: 16.0),
                   child: TextField(
