@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 import 'favourites.dart';
 import 'homescreen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class EventTapInfo extends StatefulWidget {
   static String id = 'event_tap_info';
@@ -20,7 +22,7 @@ class _EventTapInfoState extends State<EventTapInfo> {
           children: [
             Container(
               child: Padding(
-                padding: const EdgeInsets.only(top: 35.0),
+                padding: const EdgeInsets.only(top: 50.0),
                 child: Center(
                   child: Text(
                     'J.AR.VIS',
@@ -35,7 +37,7 @@ class _EventTapInfoState extends State<EventTapInfo> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 17),
               child: Container(
                 width: double.infinity,
                 height: 500,
@@ -61,8 +63,40 @@ class _EventTapInfoState extends State<EventTapInfo> {
                 ),
               ),
             ),
+            Container(
+              child: RichText(
+                  text: TextSpan(
+                      children: [
+                        TextSpan(
+                            style:GoogleFonts.poppins(
+                              color: Colors.white70,
+                              fontSize: 20.0,
+                            ),
+                            text: "Open in "
+                        ),
+                        TextSpan(
+                            style:GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            text: "Website",
+                            recognizer: TapGestureRecognizer()..onTap = () async {
+                              var url = "http://jarvis.owasp.co.in/";
+                              // if(await canLaunch(url)){
+                              //   await launch(url);
+                              // }
+                              // else{
+                              //   throw "Cannot load Url";
+                              // }
+                              await launch(url);
+                            }
+                        )
+                      ]
+                  )
+              ),
+            ),
             SizedBox(
-              height: 55,
+              height: 27,
             ),
             Container(
               child: Row(

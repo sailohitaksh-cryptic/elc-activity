@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'favourites.dart';
 import 'homescreen.dart';
@@ -64,23 +65,35 @@ class _SunburnDescState extends State<SunburnDesc> {
               ),
             ),
             Container(
-              child: Column(
-                children: [
-                  GestureDetector(
-                    onTap: () async {
-                      if (await canLaunch("https://sunburn.in/")) {
-                        await launch("https://sunburn.in/");
-                      }
-                    },
-                    child: Text(
-                      'Open in website',
-                      style: GoogleFonts.poppins(
+              child: RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      style:GoogleFonts.poppins(
+                        color: Colors.white70,
+                        fontSize: 20.0,
+                      ),
+                      text: "Open in "
+                    ),
+                    TextSpan(
+                      style:GoogleFonts.poppins(
                         color: Colors.white,
                         fontSize: 20.0,
                       ),
-                    ),
-                  ),
-                ],
+                      text: "Website",
+                      recognizer: TapGestureRecognizer()..onTap = () async {
+                        var url = "https://sunburn.in/";
+                        // if(await canLaunch(url)){
+                        //   await launch(url);
+                        // }
+                        // else{
+                        //   throw "Cannot load Url";
+                        // }
+                        await launch(url);
+                      }
+                    )
+                  ]
+                )
               ),
             ),
             SizedBox(
