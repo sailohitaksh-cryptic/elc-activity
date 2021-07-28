@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'homescreen.dart';
 import 'student_profile_view.dart';
 import 'categories.dart';
+import 'sunburn_desc.dart';
+
 class Favourites extends StatefulWidget {
   static String id ='favourites';
   @override
@@ -111,7 +113,7 @@ class _FavouritesState extends State<Favourites> {
                 padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal:40.0),
                 child: GestureDetector(
                   onTap: (){
-                    print('yes');
+                    Navigator.pushNamed(context, SunburnDesc.id);
                   },
                   child: Container(
 
