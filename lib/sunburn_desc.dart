@@ -25,7 +25,7 @@ class _SunburnDescState extends State<SunburnDesc> {
                 padding: const EdgeInsets.only(top: 50.0),
                 child: Center(
                   child: Text(
-                    'Sunburnx',
+                    'Sunburn',
                     style: TextStyle(
                       fontFamily: 'Mystical Snow',
                       color: Colors.white,
