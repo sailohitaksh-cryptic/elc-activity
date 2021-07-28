@@ -18,6 +18,7 @@ import 'student_profile_view.dart';
 import 'studentprofile.dart';
 import 'categories.dart';
 import 'sunburn_desc.dart';
+import 'laberinto.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.id:(context)=>HomeScreen(),
         EventTapInfo.id:(context)=>EventTapInfo(),
         SunburnDesc.id: (context)=>SunburnDesc(),
+        Laberinto.id: (context)=>Laberinto(),
         Favourites.id:(context)=>Favourites(),
         StudentProfileView.id:(context)=>StudentProfileView(),
         StudentProfile.id:(context)=>StudentProfile(),

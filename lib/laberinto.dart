@@ -1,20 +1,21 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
 import 'favourites.dart';
 import 'homescreen.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'categories.dart';
 import 'student_profile_view.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class EventTapInfo extends StatefulWidget {
-  static String id = 'event_tap_info';
+class Laberinto extends StatefulWidget {
+  static String id = 'laberinto';
   @override
-  _EventTapInfoState createState() => _EventTapInfoState();
+  _LaberintoState createState() => _LaberintoState();
 }
 
-class _EventTapInfoState extends State<EventTapInfo> {
+class _LaberintoState extends State<Laberinto> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +28,7 @@ class _EventTapInfoState extends State<EventTapInfo> {
                 padding: const EdgeInsets.only(top: 50.0),
                 child: Center(
                   child: Text(
-                    'J.AR.VIS',
+                    'Laberinto',
                     style: TextStyle(
                       fontFamily: 'Mystical Snow',
                       color: Colors.white,
@@ -52,9 +53,9 @@ class _EventTapInfoState extends State<EventTapInfo> {
                   children: [
                     //SizedBox(height: 20),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal:20.0),
+                      padding: EdgeInsets.symmetric(horizontal: 20.0),
                       child: Text(
-                        'Get your shields up, pick up your hammers, prepare your magic spells and come with us on Bifrost, as we Thapar Owasp Student Chapter, as your Heimdall, give you the ride to the world of coding and brainstorming fun challenges. We bring to you JARVIS; a 3-day long journey of experience, learning, and fun. Dive into the gigantic Universe of Marvel with your adroitness and hustle along with the competitive spirit of no less than the Avengers.',
+                        '"𝐈𝐟 𝐩𝐮𝐳𝐳𝐥𝐞𝐬 𝐚𝐫𝐞 𝐲𝐨𝐮𝐫 𝐜𝐚𝐫𝐝𝐢𝐨,𝐭𝐡𝐞𝐧 𝐰𝐞 𝐚𝐫𝐞 𝐫𝐨𝐨𝐭𝐢𝐧𝐠 𝐟𝐨𝐫 𝐲𝐨𝐮 𝐚𝐭 𝐋𝐀𝐁𝐄𝐑𝐈𝐍𝐓𝐎" - something that transcends the definition of being "just another CTF".\nSo put your brainstorming skills a notch higher as you dive into this pandoras box of mind-boggling challenges and find your way out of this cryptic labyrinth.Get ready for adrenaline rush, where you choose your own path and every step unfolds a unique mystery ;)',
                         style: GoogleFonts.poppins(
                           color: Colors.black,
                           fontSize: 20.0,
@@ -83,7 +84,7 @@ class _EventTapInfoState extends State<EventTapInfo> {
                             ),
                             text: "Website",
                             recognizer: TapGestureRecognizer()..onTap = () async {
-                              var url = "http://jarvis.owasp.co.in/";
+                              var url = "https://media.tenor.com/images/0dcd7d91149f5f146d749689dcba156f/tenor.gif";
                               // if(await canLaunch(url)){
                               //   await launch(url);
                               // }

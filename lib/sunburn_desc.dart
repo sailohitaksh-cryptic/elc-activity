@@ -6,6 +6,8 @@ import 'homescreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'categories.dart';
+import 'student_profile_view.dart';
 
 class SunburnDesc extends StatefulWidget {
   static String id = 'sunburn_desc';
@@ -100,11 +102,11 @@ class _SunburnDescState extends State<SunburnDesc> {
               height: 27,
             ),
             Container(
-              child: Row(
+              child:Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   GestureDetector(
-                    onTap: () {
+                    onTap:(){
                       print('yes');
                     },
                     child: Icon(
@@ -114,8 +116,8 @@ class _SunburnDescState extends State<SunburnDesc> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {
-                      print('yes');
+                    onTap:(){
+                      Navigator.pushNamed(context,Categories.id);
                     },
                     child: Icon(
                       Icons.list,
@@ -124,8 +126,8 @@ class _SunburnDescState extends State<SunburnDesc> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, HomeScreen.id);
+                    onTap:(){
+                      Navigator.pushNamed(context,HomeScreen.id);
                     },
                     child: Icon(
                       Icons.home,
@@ -134,7 +136,7 @@ class _SunburnDescState extends State<SunburnDesc> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {
+                    onTap:(){
                       Navigator.pushNamed(context, Favourites.id);
                     },
                     child: Icon(
@@ -144,8 +146,8 @@ class _SunburnDescState extends State<SunburnDesc> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {
-                      print('yes');
+                    onTap:(){
+                      Navigator.pushNamed(context, StudentProfileView.id);
                     },
                     child: Icon(
                       Icons.account_circle_outlined,
@@ -155,8 +157,8 @@ class _SunburnDescState extends State<SunburnDesc> {
                   ),
                 ],
               ),
-              height: 70,
-              width: double.infinity,
+              height:70,
+              width:double.infinity,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topRight,

@@ -1,5 +1,6 @@
 import 'package:eventaholic/categories.dart';
 import 'package:eventaholic/event_tap_info.dart';
+import 'package:eventaholic/laberinto.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'favourites.dart';
@@ -194,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal:40.0),
               child: GestureDetector(
                 onTap: (){
-                  print('yes');
+                  Navigator.pushNamed(context,Laberinto.id);
                 },
                 child: Container(
 
