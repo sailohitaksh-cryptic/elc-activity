@@ -55,7 +55,7 @@ class _LaberintoState extends State<Laberinto> {
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20.0),
                       child: Text(
-                        '"𝐈𝐟 𝐩𝐮𝐳𝐳𝐥𝐞𝐬 𝐚𝐫𝐞 𝐲𝐨𝐮𝐫 𝐜𝐚𝐫𝐝𝐢𝐨,𝐭𝐡𝐞𝐧 𝐰𝐞 𝐚𝐫𝐞 𝐫𝐨𝐨𝐭𝐢𝐧𝐠 𝐟𝐨𝐫 𝐲𝐨𝐮 𝐚𝐭 𝐋𝐀𝐁𝐄𝐑𝐈𝐍𝐓𝐎" - something that transcends the definition of being "just another CTF".\nSo put your brainstorming skills a notch higher as you dive into this pandoras box of mind-boggling challenges and find your way out of this cryptic labyrinth.Get ready for adrenaline rush, where you choose your own path and every step unfolds a unique mystery ;)',
+                        '"𝐈𝐟 𝐩𝐮𝐳𝐳𝐥𝐞𝐬 𝐚𝐫𝐞 𝐲𝐨𝐮𝐫 𝐜𝐚𝐫𝐝𝐢𝐨,𝐭𝐡𝐞𝐧 𝐰𝐞 𝐚𝐫𝐞 𝐫𝐨𝐨𝐭𝐢𝐧𝐠 𝐟𝐨𝐫 𝐲𝐨𝐮 𝐚𝐭 𝐋𝐀𝐁𝐄𝐑𝐈𝐍𝐓𝐎" - something that transcends the definition of being "just another CTF".\nSo put your brainstorming skills a notch higher as you dive into this pandoras box of mind-boggling challenges and find your way out of this cryptic labyrinth. Get ready for adrenaline rush, where you choose your own path and every step unfolds a unique mystery ;)',
                         style: GoogleFonts.poppins(
                           color: Colors.black,
                           fontSize: 20.0,
