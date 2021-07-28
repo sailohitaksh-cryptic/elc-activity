@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: [
                             Padding(
-                              padding: EdgeInsets.fromLTRB(80.0,0,40,0),
+                              padding: EdgeInsets.fromLTRB(90,0,30,0),
                               child: Text(
                                 'J.AR.VIS',
                                 style: GoogleFonts.pattaya(
@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                         Text(
-                          'Category:Technical',
+                          'Category: Technical',
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 20.0,
@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Text(
-                          'Society:Owasp',
+                          'Society: Owasp',
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 20.0,
@@ -211,10 +211,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(95, 0, 45, 0),
+                              padding: const EdgeInsets.fromLTRB(95, 0, 38, 0),
                               child: Center(
                                 child: Text(
-                                  'Grafiti-X',
+                                  'Laberinto',
                                   style: GoogleFonts.pattaya(
                                     color: Colors.black,
                                     fontSize: 40.0,
@@ -236,7 +236,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                         Text(
-                          'Category: Art',
+                          'Category: Technical',
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 20.0,
@@ -244,7 +244,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Text(
-                          'Society:FAPS',
+                          'Society: CCS',
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 20.0,
@@ -252,7 +252,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Text(
-                          'Date: 25-27 Aug 2021',
+                          'Date: Coming Soon',
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 20.0,
