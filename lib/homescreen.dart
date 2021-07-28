@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children:[
             Container(
               child: Padding(
-                padding: const EdgeInsets.only(top: 35.0),
+                padding: const EdgeInsets.only(top: 50.0),
                 child: Center(
                   child: Text(
                     'Eventaholic',
@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(
-              height:30.0,
+              height:15.0,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal:40.0),
