@@ -208,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                         Text(
-                          'Category: Concert',
+                          'Category: Dance',
                           style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 20.0,

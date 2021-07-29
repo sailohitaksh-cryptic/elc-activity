@@ -45,9 +45,32 @@ class _FavouritesState extends State<Favourites> {
                     height: 150,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Color(0xFF19A1FB),
-                      borderRadius: BorderRadius.circular(30),
-
+                        shape: BoxShape.rectangle,
+                        color: Colors.blue[300],
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.white70,
+                              offset: Offset(4.0, 4.0),
+                              blurRadius: 4.0,
+                              spreadRadius: 0.0
+                          ),
+                        ],
+                        gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Colors.blue[200],
+                              Colors.blue[300],
+                              Colors.blue[400],
+                              Colors.blue[500],
+                            ],
+                            stops: [
+                              0.1,
+                              0.3,
+                              0.8,
+                              1
+                            ])
                     ),
                     child: Center(
                       child: Column(
@@ -55,7 +78,7 @@ class _FavouritesState extends State<Favourites> {
                           Row(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal:48),
+                                padding: EdgeInsets.fromLTRB(90,0,30,0),
                                 child: Text(
                                   'J.AR.VIS',
                                   style: GoogleFonts.pattaya(
@@ -78,7 +101,7 @@ class _FavouritesState extends State<Favourites> {
                             ],
                           ),
                           Text(
-                            'Category:Technical',
+                            'Category: Technical',
                             style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 20.0,
@@ -86,7 +109,7 @@ class _FavouritesState extends State<Favourites> {
                             ),
                           ),
                           Text(
-                            'Society:Owasp',
+                            'Society: Owasp',
                             style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 20.0,
@@ -120,9 +143,32 @@ class _FavouritesState extends State<Favourites> {
                     height: 150,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Color(0xFF19A1FB),
-                      borderRadius: BorderRadius.circular(30),
-
+                        shape: BoxShape.rectangle,
+                        color: Colors.blue[300],
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.white70,
+                              offset: Offset(4.0, 4.0),
+                              blurRadius: 4.0,
+                              spreadRadius: 0.0
+                          ),
+                        ],
+                        gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Colors.blue[200],
+                              Colors.blue[300],
+                              Colors.blue[400],
+                              Colors.blue[500],
+                            ],
+                            stops: [
+                              0.1,
+                              0.3,
+                              0.8,
+                              1
+                            ])
                     ),
                     child: Center(
                       child: Column(
@@ -130,7 +176,7 @@ class _FavouritesState extends State<Favourites> {
                           Row(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal:70.0),
+                                padding: const EdgeInsets.fromLTRB(100,0,40,0),
                                 child: Text(
                                   'Sunburn',
                                   style: GoogleFonts.pattaya(
@@ -153,7 +199,7 @@ class _FavouritesState extends State<Favourites> {
                             ],
                           ),
                           Text(
-                            'Category: Concert',
+                            'Category: Dance',
                             style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 20.0,
