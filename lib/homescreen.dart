@@ -7,11 +7,13 @@ import 'favourites.dart';
 import 'categories.dart';
 import 'student_profile_view.dart';
 import 'sunburn_desc.dart';
+
 class HomeScreen extends StatefulWidget {
   static String id ='home_screen';
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
+
 
 
 
@@ -52,9 +54,32 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 150,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xFF19A1FB),
-                    borderRadius: BorderRadius.circular(30),
-
+                      shape: BoxShape.rectangle,
+                      color: Colors.blue[300],
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.white70,
+                            offset: Offset(4.0, 4.0),
+                            blurRadius: 4.0,
+                            spreadRadius: 0.0
+                        ),
+                      ],
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Colors.blue[200],
+                            Colors.blue[300],
+                            Colors.blue[400],
+                            Colors.blue[500],
+                          ],
+                          stops: [
+                            0.1,
+                            0.3,
+                            0.8,
+                            1
+                          ])
                   ),
                   child: Center(
                     child: Column(
@@ -127,9 +152,32 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 150,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xFF19A1FB),
-                    borderRadius: BorderRadius.circular(30),
-
+                      shape: BoxShape.rectangle,
+                      color: Colors.blue[300],
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.white70,
+                            offset: Offset(4.0, 4.0),
+                            blurRadius: 4.0,
+                            spreadRadius: 0.0
+                        ),
+                      ],
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Colors.blue[200],
+                            Colors.blue[300],
+                            Colors.blue[400],
+                            Colors.blue[500],
+                          ],
+                          stops: [
+                            0.1,
+                            0.3,
+                            0.8,
+                            1
+                          ])
                   ),
                   child: Center(
                     child: Column(
@@ -202,9 +250,32 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 150,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xFF19A1FB),
-                    borderRadius: BorderRadius.circular(30),
-
+                      shape: BoxShape.rectangle,
+                      color: Colors.blue[300],
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.white70,
+                            offset: Offset(4.0, 4.0),
+                            blurRadius: 4.0,
+                            spreadRadius: 0.0
+                        ),
+                      ],
+                      gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Colors.blue[200],
+                            Colors.blue[300],
+                            Colors.blue[400],
+                            Colors.blue[500],
+                          ],
+                          stops: [
+                            0.1,
+                            0.3,
+                            0.8,
+                            1
+                          ])
                   ),
                   child: Center(
                     child: Column(

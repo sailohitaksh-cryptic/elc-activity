@@ -45,8 +45,37 @@ class _LaberintoState extends State<Laberinto> {
                 width: double.infinity,
                 height: 500,
                 decoration: BoxDecoration(
-                  color: Color(0xFF19A1FB),
-                  borderRadius: BorderRadius.circular(30),
+                    shape: BoxShape.rectangle,
+                    color: Colors.blue[300],
+                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey[600],
+                          offset: Offset(2.0, 2.0),
+                          blurRadius: 10.0,
+                          spreadRadius: 1.0),
+                      BoxShadow(
+                          color: Colors.white70,
+                          offset: Offset(1.0, 1.0),
+                          blurRadius: 10.0,
+                          spreadRadius: 1.0
+                      ),
+                    ],
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Colors.blue[200],
+                          Colors.blue[300],
+                          Colors.blue[400],
+                          Colors.blue[500],
+                        ],
+                        stops: [
+                          0.1,
+                          0.3,
+                          0.8,
+                          1
+                        ])
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,

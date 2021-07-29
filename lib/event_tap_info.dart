@@ -44,15 +44,44 @@ class _EventTapInfoState extends State<EventTapInfo> {
                 width: double.infinity,
                 height: 500,
                 decoration: BoxDecoration(
-                  color: Color(0xFF19A1FB),
-                  borderRadius: BorderRadius.circular(30),
+                  shape: BoxShape.rectangle,
+                  color: Colors.blue[300],
+                  borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey[600],
+                        offset: Offset(2.0, 2.0),
+                        blurRadius: 10.0,
+                        spreadRadius: 1.0),
+                    BoxShadow(
+                        color: Colors.white70,
+                        offset: Offset(1.0, 1.0),
+                        blurRadius: 10.0,
+                        spreadRadius: 1.0
+                    ),
+                  ],
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Colors.blue[200],
+                          Colors.blue[300],
+                          Colors.blue[400],
+                          Colors.blue[500],
+                        ],
+                        stops: [
+                          0.1,
+                          0.3,
+                          0.8,
+                          1
+                        ])
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     //SizedBox(height: 20),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal:20.0),
+                      padding: EdgeInsets.symmetric(horizontal: 20.0),
                       child: Text(
                         'Get your shields up, pick up your hammers, prepare your magic spells and come with us on Bifrost, as we Thapar Owasp Student Chapter, as your Heimdall, give you the ride to the world of coding and brainstorming fun challenges. We bring to you JARVIS; a 3-day long journey of experience, learning, and fun. Dive into the gigantic Universe of Marvel with your adroitness and hustle along with the competitive spirit of no less than the Avengers.',
                         style: GoogleFonts.poppins(
@@ -67,45 +96,41 @@ class _EventTapInfoState extends State<EventTapInfo> {
             ),
             Container(
               child: RichText(
-                  text: TextSpan(
-                      children: [
-                        TextSpan(
-                            style:GoogleFonts.poppins(
-                              color: Colors.white70,
-                              fontSize: 20.0,
-                            ),
-                            text: "Open in "
-                        ),
-                        TextSpan(
-                            style:GoogleFonts.poppins(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                            ),
-                            text: "Website",
-                            recognizer: TapGestureRecognizer()..onTap = () async {
-                              var url = "http://jarvis.owasp.co.in/";
-                              // if(await canLaunch(url)){
-                              //   await launch(url);
-                              // }
-                              // else{
-                              //   throw "Cannot load Url";
-                              // }
-                              await launch(url);
-                            }
-                        )
-                      ]
-                  )
-              ),
+                  text: TextSpan(children: [
+                TextSpan(
+                    style: GoogleFonts.poppins(
+                      color: Colors.white70,
+                      fontSize: 20.0,
+                    ),
+                    text: "Open in "),
+                TextSpan(
+                    style: GoogleFonts.poppins(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                    ),
+                    text: "Website",
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () async {
+                        var url = "http://jarvis.owasp.co.in/";
+                        // if(await canLaunch(url)){
+                        //   await launch(url);
+                        // }
+                        // else{
+                        //   throw "Cannot load Url";
+                        // }
+                        await launch(url);
+                      })
+              ])),
             ),
             SizedBox(
               height: 27,
             ),
             Container(
-              child:Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   GestureDetector(
-                    onTap:(){
+                    onTap: () {
                       print('yes');
                     },
                     child: Icon(
@@ -115,8 +140,8 @@ class _EventTapInfoState extends State<EventTapInfo> {
                     ),
                   ),
                   GestureDetector(
-                    onTap:(){
-                      Navigator.pushNamed(context,Categories.id);
+                    onTap: () {
+                      Navigator.pushNamed(context, Categories.id);
                     },
                     child: Icon(
                       Icons.list,
@@ -125,8 +150,8 @@ class _EventTapInfoState extends State<EventTapInfo> {
                     ),
                   ),
                   GestureDetector(
-                    onTap:(){
-                      Navigator.pushNamed(context,HomeScreen.id);
+                    onTap: () {
+                      Navigator.pushNamed(context, HomeScreen.id);
                     },
                     child: Icon(
                       Icons.home,
@@ -135,7 +160,7 @@ class _EventTapInfoState extends State<EventTapInfo> {
                     ),
                   ),
                   GestureDetector(
-                    onTap:(){
+                    onTap: () {
                       Navigator.pushNamed(context, Favourites.id);
                     },
                     child: Icon(
@@ -145,7 +170,7 @@ class _EventTapInfoState extends State<EventTapInfo> {
                     ),
                   ),
                   GestureDetector(
-                    onTap:(){
+                    onTap: () {
                       Navigator.pushNamed(context, StudentProfileView.id);
                     },
                     child: Icon(
@@ -156,8 +181,8 @@ class _EventTapInfoState extends State<EventTapInfo> {
                   ),
                 ],
               ),
-              height:70,
-              width:double.infinity,
+              height: 70,
+              width: double.infinity,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topRight,

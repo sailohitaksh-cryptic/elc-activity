@@ -20,6 +20,7 @@ import 'categories.dart';
 import 'sunburn_desc.dart';
 import 'laberinto.dart';
 
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -51,5 +52,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 
