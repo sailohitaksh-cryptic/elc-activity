@@ -144,12 +144,27 @@ class _LoginScreenState extends State<LoginScreen> {
                           showSpinner = false;
                         });
                       } catch (e) {
-                        Alert(
-                          context: context,
-                          title: 'INVALID LOGIN!',
-                          desc: 'Wrong Email/Password',
-                        ).show();
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: Text("An error occured"),
+                                content: Text("${e.message}"),
+                                actions: [
+                                  TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text("OK"))
+                                ],
+                              );
+                            });
+                      } finally {
+                        setState(() {
+                          showSpinner = false;
+                        });
                       }
+                      ;
                     },
                     child: Container(
                       margin: EdgeInsets.only(right: 5),
