@@ -217,11 +217,21 @@ class _SignUpState extends State<SignUp> {
                         showSpinner = false;
                       });
                     } catch (e) {
-                      Alert(
-                        context: context,
-                        title: 'INVALID SIGN UP!',
-                        desc: 'pls try again',
-                      ).show();
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              title: Text("An error occured"),
+                              content: Text("${e.message}"),
+                              actions: [
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text("OK"))
+                              ],
+                            );
+                          });
                     } finally {
                       setState(() {
                         showSpinner = false;
