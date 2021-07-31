@@ -25,7 +25,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('images/welcome.png'),
+                      image: NetworkImage('https://i.pinimg.com/originals/a0/dd/e7/a0dde7e45b02c341c77d0d048a26c291.gif'),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -33,13 +33,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.only(top:88.0,left:80.0),
+                    padding: const EdgeInsets.only(top:88.0,left:35.0),
                     child: Text(
                       'Eventaholic',
                       style: TextStyle(
                         fontFamily: 'Mystical Snow',
                         color: Colors.white,
-                        fontSize: 50.0,
+                        fontSize: 70.0,
                         fontWeight: FontWeight.w400,
                       ),
 
